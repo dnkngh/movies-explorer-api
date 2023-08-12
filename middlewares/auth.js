@@ -1,7 +1,7 @@
 require('dotenv').config();
 const jwt = require('jsonwebtoken');
 
-const Unauthrized = require('../errors/Unauthorized');
+const Unauthrized = require('./errors/Unauthorized');
 
 module.exports = (req, res, next) => {
   const { authorization } = req.headers;

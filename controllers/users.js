@@ -4,9 +4,9 @@ const jwt = require('jsonwebtoken');
 const userSchema = require('../models/user');
 const status = require('http2').constants;
 
-const NotFound = require('../errors/NotFound');
-const BadRequest = require('../errors/BadRequest');
-const AlreadyTaken = require('../errors/AlreadyTaken');
+const NotFound = require('../middlewares/errors/NotFound');
+const BadRequest = require('../middlewares/errors/BadRequest');
+const AlreadyTaken = require('../middlewares/errors/AlreadyTaken');
 
 
 module.exports.getUser = (req, res, next) => {

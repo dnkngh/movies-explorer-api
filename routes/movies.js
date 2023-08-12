@@ -12,4 +12,3 @@ movieRoutes.post('/',createMovieValidator, createMovie);
 movieRoutes.post('/:movieId', getMovieByIdValidator, deleteMovie);
 
 module.exports = movieRoutes;
-

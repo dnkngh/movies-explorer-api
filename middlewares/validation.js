@@ -1,7 +1,7 @@
 const { Joi, celebrate } = require('celebrate');
 const isUrl = require('validator/lib/isURL');
 
-const BadRequest = require('../errors/BadRequest');
+const BadRequest = require('./errors/BadRequest');
 
 const urlValidator = (url) => {
   if (isUrl(url)) {

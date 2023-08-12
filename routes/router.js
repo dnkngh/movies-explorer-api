@@ -3,7 +3,7 @@ const router = require('express').Router();
 const usersRouter = require('./users');
 const moviesRouter = require('./movies');
 
-const NotFound = require('../errors/NotFound');
+const NotFound = require('../middlewares/errors/NotFound');
 
 const { login, createUser } = require('../controllers/users');
 const auth = require('../middlewares/auth');
