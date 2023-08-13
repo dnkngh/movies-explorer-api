@@ -3,10 +3,10 @@ const allowed = [
   'https://localhost:3000',
   'http://localhost:3001',
   'https://localhost:3001',
-  'http://dnknghmesto.nomoredomains.xyz',
-  'https://dnknghmesto.nomoredomains.xyz',
-  'http://api.dnknghmesto.nomoredomains.xyz',
-  'https://api.dnknghmesto.nomoredomains.xyz',
+  'http://dnknghmovies.nomoredomains.co',
+  'https://dnknghmovies.nomoredomains.co',
+  'http://api.dnknghmovies.nomoredomains.co',
+  'https://api.dnknghmovies.nomoredomains.co',
 ];
 
 const requestHandlerCORS = (req, res, next) => {
