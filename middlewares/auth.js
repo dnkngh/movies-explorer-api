@@ -14,7 +14,10 @@ module.exports = (req, res, next) => {
   const token = authorization.replace('Bearer ', '');
 
   try {
-    payload = jwt.verify(token, process.env.JWT_SECRET);
+    payload = jwt.verify(
+      token,
+      process.env.NODE_ENV === 'production' ? process.env.JWT_SECRET : '5sd0fhd5sqsa62ghs',
+    );
   } catch(err) {
     return next(new Unauthrized('Пройдите авторизацию'));
   }
