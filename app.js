@@ -11,13 +11,12 @@ const { requestLogger, errorLogger } = require('./middlewares/logger');
 const requestHandlerCORS = require('./middlewares/requestHandlerCORS');
 const requestLimiter = require('./middlewares/requestLimiter');
 
-
 const { DB_URL = 'mongodb://127.0.0.1:27017/bitfilmsdb' } = process.env;
-const { PORT = 3000 } =  process.env;
+const { PORT = 3000 } = process.env;
 
 const app = express();
 
-mongoose.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true, family: 4,});
+mongoose.connect(DB_URL, { useNewUrlParser: true, useUnifiedTopology: true, family: 4 });
 
 app.use(requestLimiter);
 
