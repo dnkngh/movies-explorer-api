@@ -1,11 +1,10 @@
-const movieSchema = require('../models/movie');
 const status = require('http2').constants;
+const movieSchema = require('../models/movie');
 
 const NotFound = require('../middlewares/errors/NotFound');
 const BadRequest = require('../middlewares/errors/BadRequest');
 const InternalServerError = require('../middlewares/errors/InternalServerError');
 const Forbidden = require('../middlewares/errors/Forbidden');
-
 
 module.exports.getMovies = (req, res, next) => {
   const owner = req.user._id;

@@ -8,7 +8,7 @@ const urlValidator = (url) => {
     return url;
   }
   throw new BadRequest('Bad request');
-}
+};
 
 module.exports.loginValidator = celebrate({
   body: Joi.object().keys({
@@ -53,4 +53,3 @@ module.exports.createMovieValidator = celebrate({
     nameEN: Joi.string().required(),
   }),
 });
-
