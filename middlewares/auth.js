@@ -10,7 +10,7 @@ module.exports = (req, res, next) => {
     throw new Unauthrized('Пройдите авторизацию');
   }
 
-  let payload
+  let payload;
   const token = authorization.replace('Bearer ', '');
 
   try {
@@ -18,7 +18,7 @@ module.exports = (req, res, next) => {
       token,
       process.env.NODE_ENV === 'production' ? process.env.JWT_SECRET : '5sd0fhd5sqsa62ghs',
     );
-  } catch(err) {
+  } catch (err) {
     return next(new Unauthrized('Пройдите авторизацию'));
   }
 
