@@ -3,6 +3,7 @@ const allowed = [
   'https://localhost:3000',
   'http://localhost:3001',
   'https://localhost:3001',
+  'localhost:3000',
   'http://dnknghmovies.nomoredomains.co',
   'https://dnknghmovies.nomoredomains.co',
   'http://api.dnknghmovies.nomoredomains.co',
