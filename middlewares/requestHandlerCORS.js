@@ -8,6 +8,8 @@ const allowed = [
   'https://dnknghmovies.nomoredomains.co',
   'http://api.dnknghmovies.nomoredomains.co',
   'https://api.dnknghmovies.nomoredomains.co',
+  'http://dnknghmovies.nomoredomainsicu.ru',
+  'https://dnknghmovies.nomoredomainsicu.ru',
 ];
 
 const requestHandlerCORS = (req, res, next) => {

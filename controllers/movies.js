@@ -43,6 +43,7 @@ module.exports.createMovie = (req, res, next) => {
       nameRU,
       nameEN,
       movieId,
+      owner,
     })
     .then((movie) => res.status(status.HTTP_STATUS_CREATED).send(movie))
     .catch((err) => {
