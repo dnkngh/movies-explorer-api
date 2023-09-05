@@ -12,8 +12,8 @@ const { loginValidator, createUserValidator } = require('../middlewares/validati
 router.use('/signin', loginValidator, login);
 router.use('/signup', createUserValidator, createUser);
 
-router.use('/users', auth, usersRouter);
-router.use('/cards', auth, moviesRouter);
+router.use('/users', usersRouter);
+router.use('/movies', auth, moviesRouter);
 router.use('/*', (req, res, next) => {
   next(new NotFound('Не найдено'));
 });
