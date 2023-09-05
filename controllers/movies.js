@@ -45,13 +45,7 @@ module.exports.createMovie = (req, res, next) => {
       movieId,
     })
     .then((movie) => res.status(status.HTTP_STATUS_CREATED).send(movie))
-    .catch((err) => {
-      if (err.name === 'ValidationError') {
-        next(new BadRequest('Bad request'));
-      } else {
-        next(new InternalServerError('Internal server error'));
-      }
-    });
+
 };
 
 module.exports.deleteMovie = (req, res, next) => {
