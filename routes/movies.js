@@ -8,7 +8,7 @@ const {
 const { createMovieValidator, getMovieByIdValidator } = require('../middlewares/validation');
 
 movieRoutes.get('/', getMovies);
-movieRoutes.post('/',createMovieValidator, createMovie);
-movieRoutes.post('/:movieId', getMovieByIdValidator, deleteMovie);
+movieRoutes.post('/', createMovieValidator, createMovie);
+movieRoutes.delete('/:movieId', getMovieByIdValidator, deleteMovie);
 
 module.exports = movieRoutes;
